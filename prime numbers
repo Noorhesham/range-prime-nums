@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int start, end, meow=0;
+            Console.WriteLine("enter a starting number : ");
+            start = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter an ending number : ");
+            end = int.Parse(Console.ReadLine());
+            bool prime = true;
+            Console.WriteLine("\n prime numbers from {0} to {1} are ",start, end);
+            for(int x = start; x <= end;x++)
+            {
+               
+                for (int i = 2; i <x; i++)
+                {
+                    if ( x % i == 0)
+                    {
+                        prime = false; //happened means prime is false and if prime wont work so we will loop again
+                                       //if did not happen means prime is true and if prime will excute
+                        break;
+                    }
+
+                }
+                if (prime) //true 
+                {
+                   
+                    Console.WriteLine(x);
+                }
+                prime = true;
+
+            }
+            }   
+            }
+        }
+   
