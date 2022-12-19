@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int start, end;
+            Console.WriteLine("enter a starting number : ");
+            start = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter an ending number : ");
+            end = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n perfect numbers from {0} to {1} are ", start, end);
+            for (int x = start; x <= end; x++)
+            {
+                int sum = 0;
+                for (int i = 1; i < x; i++)
+                {
+
+
+                    if (x % i == 0)
+                    {
+
+
+                        sum = i + sum;
+                    }
+                   
+                }
+                if (sum == x)
+                {
+                    Console.WriteLine(x);
+                }
+            }
+            }
+    }
+}
